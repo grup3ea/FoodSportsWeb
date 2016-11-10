@@ -17,8 +17,8 @@ export class LoginComponent implements OnInit {
   ngOnInit():any {
     if(this.userService.isLogin()) this.router.navigate(['dashboard', 'home']);
     this.userForm = this.fb.group({
-      name:[' ', Validators.required],
-      password:[' ', Validators.required]
+      name:['', Validators.required],
+      password:['', Validators.required]
     });
   }
 

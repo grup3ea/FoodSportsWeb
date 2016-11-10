@@ -31,23 +31,6 @@ export class UserService {
         this.localStorage.clear();
         this.router.navigate(['']);
     }
-/*
-
-    /!**Doesn't seem to work, tried another one too**!/
-    login(name, password) {
-        return this.http.post(Config.API + '/login', JSON.stringify({name: name, password: password}))
-            .map((response: Response) => {
-                // login successful if there's a jwt token in the response
-                let user = response.json();
-                if (user && user.token) {
-                    // store user details and jwt token in local storage to keep user logged in between page refreshes
-                    localStorage.setItem('currentUser', JSON.stringify(user));
-                }
-            });
-    }
-*/
-
-    /**Or this one**/
 
     login(user: User) {
         const body = JSON.stringify({name: user.name, password: user.password});
@@ -56,8 +39,8 @@ export class UserService {
 
         return this.http.post(Config.API + '/login', body, {headers: headers}).map(
             (data: Response) => {
-                console.log(data)
-                console.log(Response)
+                console.log(data);
+                console.log(Response);
                 let user = data.json();
                 this.user = user.user;
                 this.user.token = user.token;
@@ -66,9 +49,6 @@ export class UserService {
             }
         ).catch(this.handleError);
     }
-
-
-
 
     getUserLogin() {
         return this.user;
@@ -81,7 +61,6 @@ export class UserService {
         return this.http.get(url, {headers: headers}).map(
             (data: Response) => data.json()
         ).catch(this.handleError);
-
     }
 
     getHeadersDefault(): Headers {
