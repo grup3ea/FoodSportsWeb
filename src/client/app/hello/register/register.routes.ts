@@ -3,7 +3,7 @@ import { RegisterComponent } from './index';
 
 export const RegisterRoutes: Route[] = [
     {
-        path: '',
+        path: 'register',
         component: RegisterComponent
     }
 ];

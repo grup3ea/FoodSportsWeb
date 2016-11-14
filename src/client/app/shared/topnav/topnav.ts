@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {UserService} from '../services/user.service';
 import {User} from '../classes/user';
-import {$} from 'protractor';
 
 @Component({
     moduleId: module.id,

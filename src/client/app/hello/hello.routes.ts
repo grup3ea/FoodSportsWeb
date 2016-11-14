@@ -1,11 +1,11 @@
 import { Route } from '@angular/router';
 import { HelloComponent } from './index';
-import {LoginRoutes} from '../login/login.routes';
-import {RegisterRoutes} from '../register/register.routes';
+import {LoginRoutes} from './login/login.routes';
+import {RegisterRoutes} from './register/register.routes';
 
 export const HelloRoutes: Route[] = [
     {
-        path: '',
+        path: 'hello',
         component: HelloComponent,
         children: [
             ...LoginRoutes,

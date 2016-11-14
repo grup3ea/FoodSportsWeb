@@ -20,7 +20,7 @@ import {UserModule}             from './users/user.module';
     	DropdownModule,
         ModalModule,
     	HomeModule,
-      UserModule
+        UserModule
     ],
     declarations: [
         DashboardComponent,

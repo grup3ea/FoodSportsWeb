@@ -21,7 +21,7 @@ import { UserEditComponent }    from './user-edit/user-edit.component';
     UserEditComponent
   ],
   imports: [
-      CommonModule,
+    CommonModule,
     FormsModule,
     RouterModule,
     ReactiveFormsModule,
