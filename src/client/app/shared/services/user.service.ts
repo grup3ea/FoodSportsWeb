@@ -32,6 +32,24 @@ export class UserService {
         this.router.navigate(['']);
     }
 
+    register(user: User) {
+      const body = JSON.stringify({name:user.name, password:user.password, email:user.email, role:user.role});
+      const headers = new Headers();
+      headers.append('Content-Type', 'application/json');
+      return this.http.post(Config.API + '/register', body, {headers:headers}).map(
+        (data: Response) => {
+          console.log(data);
+          console.log(Response);
+          let user = data.json();
+          this.user = user.user;
+          this.user.email = user.email;
+          this.user.password = user.password;
+          this.user.role = user.role;
+          return true;
+        }
+      ).catch(this.handleError);
+    }
+
     login(user: User) {
         const body = JSON.stringify({name: user.name, password: user.password});
         const headers = new Headers();

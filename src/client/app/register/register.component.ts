@@ -20,7 +20,6 @@ export class RegisterComponent implements OnInit {
         email:['', Validators.required],
         password:['', Validators.required]
       });
-        //Need to do the register classes and show it before login
     }
 
   onRegister() {

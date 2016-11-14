@@ -18,8 +18,8 @@ import {AuthGuard} from './guards/auth.guard';
         CoolStorageModule
     ],
     providers: [
-        UserService
-        ,AuthGuard
+        UserService,
+        AuthGuard
     ],
     declarations: [],
     exports: [
