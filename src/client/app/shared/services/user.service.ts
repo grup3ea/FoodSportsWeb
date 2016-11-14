@@ -33,7 +33,7 @@ export class UserService {
     }
 
     login(user: User) {
-        const body = JSON.stringify({name: user.name, password: user.password});
+        const body = JSON.stringify({email: user.email, password: user.password});
         const headers = new Headers();
         headers.append('Content-Type', 'application/json');
 
@@ -48,6 +48,25 @@ export class UserService {
                 return true;
             }
         ).catch(this.handleError);
+    }
+
+    register(user: User) {
+      const body = JSON.stringify({name: user.name, email: user.email, password: user.password, role: "Client"});
+      const headers = new Headers();
+      headers.append('Content-Type', 'application/json');
+
+      return this.http.post(Config.API + '/register', body, {headers: headers}).map(
+        (data: Response) => {
+          console.log(data);
+          console.log(Response);
+          let user = data.json();
+          this.user = user.user;
+          this.user.token = user.token;
+          this.localStorage.setObject('user', this.user);
+          return true;
+        }
+      ).catch(this.handleError);
+
     }
 
     getUserLogin() {
