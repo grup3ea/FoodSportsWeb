@@ -12,7 +12,7 @@ export const DashboardRoutes: Route[] = [
     	component: DashboardComponent,
     	children: [
 	    	...HomeRoutes,
-        ...UserRoutes
+        	...UserRoutes
     	],
       canActivate: [AuthGuard]
   	}
