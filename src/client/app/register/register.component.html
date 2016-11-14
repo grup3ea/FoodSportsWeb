@@ -1,10 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<div class="register-page">
+  <div class="row">
+    <div class="col-lg-4 col-lg-offset-4">
+      <img src="assets/img/os-runner-NEW.jpg" width="150px" class="user-avatar"/>
+      <h1>Food Sport Register</h1>
+      <form [formGroup]="userForm" (ngSubmit)="onRegister()">
+        <div class="form-content">
+          <div class="form-group">
+            <input type="text"  class="form-control input-underline input-lg" formControlName="name"
+                   placeholder="Nom complet">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control input-underline input-lg" formControlName="email"
+                   placeholder="Email">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control input-underline input-lg" formControlName="role"
+                   placeholder="Role">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control input-underline input-lg" formControlName="password"
+                   placeholder="Password">
+          </div>
+        </div>
+        <button class="btn rounded-btn" [disabled]="!userForm.valid">Register</button>
+      </form>
+    </div>
+  </div>
+</div>
