@@ -51,7 +51,7 @@ export class UserService {
   }
 
   login(user: User) {
-    const body = JSON.stringify({name: user.name, password: user.password});
+    const body = JSON.stringify({email: user.email, password: user.password});
     const headers = new Headers();
     headers.append('Content-Type', 'application/json');
 
