@@ -19,7 +19,7 @@ export class TopNavComponent implements OnInit {
     }
 
     changeTheme(color: string): void {
-        var link: any = $('<link>');
+        var link: any = ('<link>');
         link
             .appendTo('head')
             .attr({type: 'text/css', rel: 'stylesheet'})
@@ -27,7 +27,7 @@ export class TopNavComponent implements OnInit {
     }
 
     rtl(): void {
-        var body: any = $('body');
+        var body: any = ('body');
         body.toggleClass('rtl');
     }
 
@@ -36,8 +36,8 @@ export class TopNavComponent implements OnInit {
     }
 
     sidebarToggler(): void {
-        var sidebar: any = $('#sidebar');
-        var mainContainer: any = $('.main-container');
+        var sidebar: any = ('#sidebar');
+        var mainContainer: any = ('.main-container');
         sidebar.toggleClass('sidebar-left-zero');
         mainContainer.toggleClass('main-container-ml-zero');
     }

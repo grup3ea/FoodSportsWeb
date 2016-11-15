@@ -1,8 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormGroup, FormBuilder, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
-import {UserService} from '../shared/services/user.service';
-
+import {UserService} from '../../shared/services/user.service';
 
 @Component({
     moduleId: module.id,
@@ -18,14 +17,14 @@ export class RegisterComponent implements OnInit {
       this.userForm = this.fb.group({
         name:['', Validators.required],
         email:['', Validators.required],
-        password:['', Validators.required]
+        password:['', Validators.required],
+        role:['', Validators.required]
       });
-        //Need to do the register classes and show it before login
     }
 
   onRegister() {
     this.userService.register(this.userForm.value).subscribe(
-      data => this.router.navigate(['dashboard', 'home']),
+      data => this.router.navigate(['hello', 'login']),
       error => console.log(error)
     );
   }

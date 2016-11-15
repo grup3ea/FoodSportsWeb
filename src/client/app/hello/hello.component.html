@@ -1,0 +1,28 @@
+<ul class="nav nav-tabs">
+  <register-cmp></register-cmp>
+  <li role="presentation" [routerLinkActive]="['is-active']">
+    <a [routerLink]="['/register']"></a>
+  </li>
+</ul>
+<ul class="nav nav-tabs">
+  <login-cmp>Login</login-cmp>
+  <li role="presentation" [routerLinkActive]="['is-active']">
+    <a [routerLink]="['/login']"></a>
+  </li>
+</ul>
+
+<section class="main-container">
+  <router-outlet></router-outlet>
+</section>
+
+<!--
+<a [routerLink]="['/login']" [routerLinkActive]="['is-active']"><login-cmp></login-cmp></a>
+<div class="al-main">
+  <div class="al-content">
+    <router-outlet></router-outlet>
+  </div>
+  <a routerLink='/login'>
+    <login-cmp></login-cmp>
+  </a>
+</div>
+-->

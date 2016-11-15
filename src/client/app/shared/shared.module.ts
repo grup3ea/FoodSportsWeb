@@ -1,15 +1,10 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
-import {CoolStorageModule} from 'angular2-cool-storage';
-
-import {UserService} from './services/user.service';
-import {AuthGuard} from './guards/auth.guard';
-
-/**
-* Do not specify providers for modules that might be imported by a lazy loaded module.
-*/
+import { CommonModule }                  from '@angular/common';
+import { FormsModule }                   from '@angular/forms';
+import { RouterModule }                  from '@angular/router';
+import {CoolStorageModule}               from 'angular2-cool-storage';
+import {UserService}                     from './services/user.service';
+import {AuthGuard}                       from './guards/auth.guard';
 
 @NgModule({
     imports: [
@@ -18,8 +13,8 @@ import {AuthGuard} from './guards/auth.guard';
         CoolStorageModule
     ],
     providers: [
-        UserService
-        ,AuthGuard
+        UserService,
+        AuthGuard
     ],
     declarations: [],
     exports: [

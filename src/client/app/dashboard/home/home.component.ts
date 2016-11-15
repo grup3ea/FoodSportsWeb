@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   numUsers:number=0;
-  petAPI:number=0;
+  questions:number=0;
 }

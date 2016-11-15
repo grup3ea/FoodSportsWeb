@@ -1,8 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormGroup, FormBuilder, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
-import {UserService} from '../shared/services/user.service';
-
+import {UserService} from '../../shared/services/user.service';
 
 @Component({
 	moduleId: module.id,
@@ -17,7 +16,7 @@ export class LoginComponent implements OnInit {
   ngOnInit():any {
     if(this.userService.isLogin()) this.router.navigate(['dashboard', 'home']);
     this.userForm = this.fb.group({
-      name:['', Validators.required],
+      email:['', Validators.required],
       password:['', Validators.required]
     });
   }
