@@ -18,13 +18,13 @@ export class RegisterComponent implements OnInit {
         name:['', Validators.required],
         email:['', Validators.required],
         password:['', Validators.required],
-          role:['', Validators.required]
+        role:['', Validators.required]
       });
     }
 
   onRegister() {
     this.userService.register(this.userForm.value).subscribe(
-      data => this.router.navigate(['dashboard', 'home']),
+      data => this.router.navigate(['hello', 'login']),
       error => console.log(error)
     );
   }
