@@ -6,9 +6,7 @@ import { UserService } from '../../shared/services/user.service';
   selector: 'app-users',
   templateUrl: './users.component.html'
 })
+
 export class UsersComponent {
-
   constructor(private users:UserService) { }
-
-
 }

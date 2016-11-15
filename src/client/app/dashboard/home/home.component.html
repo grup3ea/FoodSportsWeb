@@ -16,7 +16,7 @@
               </div>
               <div class="col-xs-9 text-xs-center">
                 <h1>{{numUsers}}</h1>
-                <p>Users active</p>
+                <p>Subscribed users</p>
               </div>
             </div>
           </div>
@@ -28,7 +28,7 @@
                 <i class="fa fa-tasks fa-5x"></i>
               </div>
               <div class="col-xs-9 text-xs-center">
-                <h1>{{petAPI}}</h1>
+                <h1>{{questions}}</h1>
                 <p>Clients Questions</p>
               </div>
             </div>
@@ -39,7 +39,7 @@
             Things to Do
           </div>
           <div class="card-block">
-            <li class="list-group-item" *ngFor="let item of apiUsers">
+            <li class="list-group-item" *ngFor="let item of user">
               {{item.user}}: {{item.count}}
             </li>
           </div>
