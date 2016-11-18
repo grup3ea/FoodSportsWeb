@@ -1,15 +1,20 @@
-<ul class="nav nav-tabs">
-  <register-cmp></register-cmp>
-  <li role="presentation" [routerLinkActive]="['is-active']">
-    <a [routerLink]="['/register']"></a>
-  </li>
-</ul>
-<ul class="nav nav-tabs">
+<div class="login-page">
+  <button style="position:fixed;left: 10px; " type="button" class="btn btn-success">Register</button>
   <login-cmp>Login</login-cmp>
   <li role="presentation" [routerLinkActive]="['is-active']">
     <a [routerLink]="['/login']"></a>
   </li>
-</ul>
+
+
+<div style="visibility: hidden">
+  <!-- Aquí comienza el register -->
+  <register-cmp></register-cmp>
+  <li role="presentation" [routerLinkActive]="['is-active']">
+    <a [routerLink]="['/register']"></a>
+  </li>
+</div>
+
+</div>
 
 <section class="main-container">
   <router-outlet></router-outlet>
